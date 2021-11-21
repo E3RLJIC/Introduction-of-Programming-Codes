@@ -1696,9 +1696,167 @@ int main()
 
 }
 
+#Lecture 11
+
+#Rising star while loop
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int i = 1, j = 1;
+	while (i <= 5)
+	{
+		j = 1;
+		while (j <= i)
+		{
+			cout << "*"; //print 5 stars
+			j++;
+		}
+		cout << endl;
+		i++;
+	}
+
+}
+
+#falling star while loop
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int i = 1, j = 1;
+	while (i <= 5)
+	{
+		j = i;
+		while (j <= 5)
+		{
+			cout << "*"; //print 5 stars
+			j++;
+		}
+		cout << endl;
+		i++;
+	}
+
+}
+
+#rising and fall stars while loop 
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int i = 1, j = 1;
+	while (i <= 5)
+	{
+		j = 1;
+		while (j <= i)
+		{
+			cout << "*"; //print 5 stars
+			j++;
+		}
+		cout << endl;
+		i++;
+	}
 
 
+	int x = 1, y = 1;
+	while (x <= 5)
+	{
+		y = x;
+		while (y <= 5)
+		{
+			cout << "*"; //print 5 stars
+			y++;
+		}
+		cout << endl;
+		x++;
+	}
+}
+#table 
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int y, x = 0;
+	cout << "Enter a number you want the table of: " << endl;
+	cin >> y;
+	while (cin.fail())
+	{
+		cout << "Invalid command enter the number again: " << endl;
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cin >> y;
+	}
+	while (x <= 10)
+	{
+		cout << y << " x " << x << " = " << y * x << endl;
+		x++;
+	}
 
+}
+#Factorial 
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    cout << "Enter the number for factorial\n";
+    int x, fact=1;
+    cin >> x;
+    for (int y = x; y > 0; y--)
+    {
+       fact = y*fact;
+    }
+    cout << "The factorial is: " << fact;
+}
+
+#Lecure 12 Arrays
+
+#Marks
+#include <array>
+#include <string>
+#include <algorithm>
+using namespace std;
+#include <iostream>
+
+int main()
+{
+    cout << "Hello User!\nEnter marks for five subjects";
+    int marks[5];
+    int sum=0;
+    for (int i = 0; i < 5; i++)
+    {
+        cout << "\nInput the subject marks" << endl;
+        cin >> marks[i];
+	//if the user enters alphabet or marks more than 100 or less than zero (negative)
+        while (cin.fail() || marks[i]>100 || marks[i]<0) {
+            cout << "invalid command, enter the marks again\n";
+            cin.clear();
+            cin.ignore();
+            cin >> marks[i];
+        }
+
+          sum = sum + marks[i];
+        }
+    cout << "\nYour average is: " << sum / 5<<endl;
+}
+#months array
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    //declaring and initialising string array for the months
+    string months[12] = { "January", "February", "March","April","May","June","July","August","September","October","November","December" };
+    
+    //displaying the values stored in the months array
+    for (int i = 0; i < 12; i++)
+    {
+        cout << months[i] << endl;
+    }
+}
 
 
 
