@@ -2069,3 +2069,130 @@ void bye()
 {
     cout << "Goodbye\n";
 }
+
+#15 part 2
+#funtion time
+#include <iostream>  
+using namespace std;
+/* return type set to string as this function will return a string value back  to main program */
+
+string greetings(int time) {
+	//evaluate int value passed in and set return message 
+	if (time < 12) {
+		return "Good Morning";
+	}
+	else if(time >=12 && time <=17)  {
+		return "Good Afternoon";
+	}
+	else if (time >= 18 && time <= 21) {
+		return "Good Evening";
+
+	}
+	else if (time >= 22 && time <= 24) {
+		return "Good Night";
+	}
+
+}
+int main() {
+	cout << "What time is it? Enter the time in 24 format" << endl; //ask the user for time 
+	int userInput; //variable to store user response
+	cin >> userInput; //get user input
+
+	//output string returned by function 
+	cout << greetings(userInput) << endl;
+	return 0;
+}
+
+#exercises solution
+#root value
+#include <iostream>
+#include <string>
+#include <math.h>
+#include <cmath>
+using namespace std;
+
+string message(double num)
+{
+
+	cout << "\n\nThe rooth from 1-10 is: " << endl;
+	double y = 1;
+	do
+	{
+		cout << y << " root value for " << num << " is: ";
+		double x = 1 / y;
+		double r = pow(num, x);
+		cout << r << endl;
+		y++;
+	} while (y != 11);
+
+	return "********END OF THE CODE*******";
+}
+
+int main()
+{
+
+	int num, fact = 1;
+	
+	cout << "Enter a number you want the root value from 1-10: " << endl;
+	cin >> num;
+
+	while (cin.fail())
+	{
+		cout << "Invalid command enter the numbers again: " << endl;
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cin >> num;
+	}
+
+
+	cout << message(num) << endl;
+
+	return 0;
+
+}
+
+#exponent value
+#include <iostream>
+#include <string>
+#include <math.h>
+#include <cmath>
+using namespace std;
+
+string message(double num)
+{
+
+	cout << "\n\nThe exponent from 1-10 is: " << endl;
+	double y = 1;
+	do
+	{
+		cout << y << " exponent value for " << num << " is: ";
+		
+		cout << pow(num, y) << endl;
+		y++;
+	} while (y != 11);
+
+	return "********END OF THE CODE*******";
+}
+
+int main()
+{
+
+	int num, fact = 1;
+
+	cout << "Enter a number you want the exponent value from 1-10: " << endl;
+	cin >> num;
+
+	while (cin.fail())
+	{
+		cout << "Invalid command enter the numbers again: " << endl;
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cin >> num;
+	}
+
+
+	cout << message(num) << endl;
+
+	return 0;
+
+}
